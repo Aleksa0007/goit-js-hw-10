@@ -68,7 +68,7 @@ function startTimer() {
                return;
             }
             const formattedDateTime = convertMs(remainingTime);
-            console.log(formattedDateTime);
+            // console.log(formattedDateTime);test
             updateUIClock(formattedDateTime);
             
         }, 1000)
