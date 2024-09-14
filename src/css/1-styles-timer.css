@@ -1,0 +1,28 @@
+.general-div {
+  width: 300px;
+};
+
+.timer {
+  display: flex;
+  gap: 20px;
+  width: 220px;
+};
+
+#datetime-picker {
+  width: 300px;
+};
+
+button {
+  width: 40px;
+};
+
+div.field {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 40px;
+};
+
+span.value {
+  size: 40px;
+};

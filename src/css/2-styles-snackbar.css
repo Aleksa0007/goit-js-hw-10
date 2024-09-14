@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+
+}
+.form {
+  display: block;
+  align-items: baseline;
+  width: 220px;
+  gap: 10px;
+};
+
+.delay-input {
+
+};
+
+fieldset {
+  width: 220px;
+  gap: 10px;
+};
+
+button {
+  width: 220px;
+}
