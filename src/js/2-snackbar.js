@@ -2,13 +2,12 @@ import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
 const form = document.querySelector(".form");
-let intervalId = null;
 let isFulfielled = true;
 
 form.addEventListener("submit", event => {
     event.preventDefault();
 
-    const inputValue = form.elements.delay.value.trim();
+    const inputValue = parseInt(form.elements.delay.value.trim(), 10);
     const checked = form.querySelector('input[name="state"]:checked');
     isFulfielled = checked.value == "fulfilled";
 
@@ -18,21 +17,19 @@ form.addEventListener("submit", event => {
             title: "success",
             message: `✅ Fulfilled promise in ${inputValue}ms`
         });
-        clearTimeout(intervalId);
     })
     .catch(() => {
         iziToast.error({
             title: "Error",
             message: `❌ Rejected promise in ${inputValue}ms`
         });
-        clearTimeout(intervalId);
     });
 })
 
 function makeNotification(delay) {
     
     return new Promise ((resolve, rejected) => {
-        intervalId = setInterval(() => {
+         setTimeout(() => {
             
             if(isFulfielled){
                 resolve();
